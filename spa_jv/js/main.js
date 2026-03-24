@@ -7,6 +7,7 @@ import Utils from "./Utils.js";
 const routes = {
   "/": Home,
   "/personnages": Home,
+  "/personnages/:id": DetailPersonnage,
 };
 
 const router = async () => {
