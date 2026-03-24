@@ -1,0 +1,28 @@
+{
+  "personnages": [
+    {
+      "id": 1,
+      "nom": "Scout",
+      "img": "https://i.pinimg.com/474x/af/f9/9b/aff99b690419419a02bc28fd7b532263.jpg",
+      "description": "Il va vite, il peut faire un double saut, une vraie tête brulée.",
+      "favori": false,
+      "equipement": ["Scattergun", "Pistol","Bat"]
+    },
+    {
+      "id": 2,
+      "nom": "Soldier",
+      "img": "https://cdn.displate.com/artwork/857x1200/2023-03-15/772630cae846746bffb3824e493156f1_03ad395a8c30d2f70e560fbf2191a124.jpg",
+      "description": "Patriote américain qui se prend pour un soldat, peut se propulser avec sont lance roquette et faire exploser tout le monde.",
+      "favori": false,
+      "equipement": ["Rocket Launcher", "Shotgun","Shovel"]
+    },
+    {
+      "id": 3,
+      "nom": "Pyro",
+      "img": "https://cdn.displate.com/artwork/270x380/2023-03-15/7e5e5e7c1b532bbd2fd785562e81178a_d1aabd37c123a10b1ccbccaafb06e575.jpg",
+      "description": "Un sociopath masqué dont on ne connait rien sur ses origines ni sur sont genre ni sur ce qu'il (ou elle ?!) est réellement. On sait juste qu'il aime cramé des trucs",
+      "favori": false,
+      "equipement": ["Flamethrower", "Shotgun","Axe"]
+    }
+  ]
+}
