@@ -1,6 +1,7 @@
 import Home from "./views/pages/Home.js";
 import DetailPersonnage from "./views/pages/DetailPersonnage.js";
 import Error404 from "./views/pages/Error404.js";
+import Favoris from "./views/pages/Favoris.js";
 
 import Utils from "./Utils.js";
 
@@ -8,6 +9,7 @@ const routes = {
   "/": Home,
   "/personnages": Home,
   "/personnages/:id": DetailPersonnage,
+  "/favoris": Favoris,
 };
 
 const router = async () => {
