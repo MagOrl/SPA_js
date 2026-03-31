@@ -1,6 +1,5 @@
 import PersonnageProvider from '../../class/personnage.js';
 import { getFavoriteIds, removeFavorite } from '../../storage/favoritesStorage.js';
-import { initLazyImages } from '../../utils/lazyLoad.js';
 
 export default class Favoris {
   constructor() {
@@ -58,7 +57,6 @@ export default class Favoris {
     }
 
     grid.innerHTML = this.personnages.map((p) => this.cardTemplate(p)).join('');
-    initLazyImages(document);
 
     grid.addEventListener('click', (event) => {
       const removeBtn = event.target.closest('button[data-remove-id]');
@@ -74,7 +72,6 @@ export default class Favoris {
       }
 
       grid.innerHTML = this.personnages.map((p) => this.cardTemplate(p)).join('');
-      initLazyImages(document);
     });
   }
 
@@ -83,7 +80,7 @@ export default class Favoris {
 
     return `
       <article class="tf2-card">
-        <img data-src="${image}" alt="${personnage.nom}" class="tf2-card__img">
+        <img src="${image}" alt="${personnage.nom}" class="tf2-card__img">
         <h3 class="tf2-card__title">${personnage.nom}</h3>
         <div class="tf2-card__actions">
           <a class="tf2-btn" href="#/personnages/${personnage.id}">Voir détail</a>

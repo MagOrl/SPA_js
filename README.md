@@ -50,7 +50,6 @@ Routeur : `spa_jv/js/main.js`
 - Détail + note (PATCH) + favoris : `spa_jv/js/views/pages/DetailPersonnage.js`
 - Favoris (page) : `spa_jv/js/views/pages/Favoris.js`
 - Stockage favoris (localStorage) : `spa_jv/js/storage/favoritesStorage.js`
-- Lazy-loading images : `spa_jv/js/utils/lazyLoad.js`
 - Accès API personnages : `spa_jv/js/class/personnage.js`
 - Endpoint API : `spa_jv/js/config.js`
 

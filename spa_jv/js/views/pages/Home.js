@@ -1,6 +1,5 @@
 import PersonnageProvider from '../../class/personnage.js';
 import { isFavorite, toggleFavorite } from '../../storage/favoritesStorage.js';
-import { initLazyImages } from '../../utils/lazyLoad.js';
 
 export default class Home {
     constructor() {
@@ -202,7 +201,6 @@ export default class Home {
         const currentItems = this.filtered.slice(start, end);
 
         grid.innerHTML = currentItems.map((personnage) => this.cardTemplate(personnage)).join('');
-        initLazyImages(document);
 
         const prevDisabled = this.currentPage === 1 ? 'disabled' : '';
         const nextDisabled = this.currentPage === totalPages ? 'disabled' : '';
@@ -227,7 +225,7 @@ export default class Home {
 
         return `
             <article class="tf2-card">
-                <img data-src="${image}" alt="${personnage.nom}" class="tf2-card__img">
+                <img src="${image}" alt="${personnage.nom}" class="tf2-card__img">
                 <h3 class="tf2-card__title">${personnage.nom}</h3>
                 <p class="tf2-card__desc">${personnage.description}</p>
                 <p class="tf2-card__items"><strong>Equipement:</strong> ${equipements}</p>

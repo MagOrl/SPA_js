@@ -1,7 +1,6 @@
 import PersonnageProvider from "../../class/personnage.js";
 import Utils from "../../Utils.js";
 import { isFavorite, toggleFavorite } from "../../storage/favoritesStorage.js";
-import { initLazyImages } from "../../utils/lazyLoad.js";
 import { ENDPOINT } from "../../config.js";
 
 export default class DetailPersonnage {
@@ -41,7 +40,7 @@ export default class DetailPersonnage {
         </header>
 
         <div class="tf2-detail">
-          <img data-src="${image}" alt="${this.escapeHtml(this.personnage.nom)}" class="tf2-img">
+          <img src="${image}" alt="${this.escapeHtml(this.personnage.nom)}" class="tf2-img">
 
           <div class="tf2-info">
             <p class="tf2-desc">${this.escapeHtml(this.personnage.description || '')}</p>
@@ -89,8 +88,6 @@ export default class DetailPersonnage {
   }
 
   async afterRender() {
-    initLazyImages(document);
-
     const favBtn = document.querySelector('#tf2-fav');
     if (favBtn && this.personnage) {
       favBtn.addEventListener('click', () => {
