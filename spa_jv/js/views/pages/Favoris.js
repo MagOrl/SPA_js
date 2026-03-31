@@ -79,9 +79,7 @@ export default class Favoris {
   }
 
   cardTemplate(personnage) {
-    const image = personnage.img && String(personnage.img).trim().length > 0
-      ? personnage.img
-      : `https://placehold.co/600x360/2f3745/ffffff?text=${encodeURIComponent(personnage.nom)}`;
+    const image = personnage.img;
 
     return `
       <article class="tf2-card">
