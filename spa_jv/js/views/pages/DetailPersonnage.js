@@ -23,13 +23,9 @@ export default class DetailPersonnage {
       return `<p>Personnage introuvable.</p>`;
     }
 
-    const image = this.personnage.img && String(this.personnage.img).trim().length > 0
-      ? this.personnage.img
-      : `https://placehold.co/600x360/2f3745/ffffff?text=${encodeURIComponent(this.personnage.nom)}`;
+    const image = this.personnage.img;
 
-    const equipements = Array.isArray(this.personnage.equipement) && this.personnage.equipement.length > 0
-      ? this.personnage.equipement.join(', ')
-      : 'Aucun equipement';
+    const equipements = this.personnage.equipement;
 
     const rating = typeof this.personnage.note === 'number' ? this.personnage.note : 0;
     const fav = isFavorite(this.personnage.id);
