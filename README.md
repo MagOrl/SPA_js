@@ -28,7 +28,7 @@ Ressource principale :
 Dans un autre terminal :
 
 ```bash
-npm run dev #à faire dans le répertoire spa_jv
+npm run dev 
 ```
 
 Le site s'ouvre sur : `http://localhost:5173`
