@@ -221,13 +221,9 @@ export default class Home {
     }
 
     cardTemplate(personnage) {
-        const image = personnage.img && personnage.img.trim().length > 0
-            ? personnage.img
-            : `https://placehold.co/600x360/2f3745/ffffff?text=${encodeURIComponent(personnage.nom)}`;
+        const image = personnage.img;
 
-        const equipements = personnage.equipement.length > 0
-            ? personnage.equipement.join(', ')
-            : 'Aucun equipement';
+        const equipements = personnage.equipement.length;
 
         return `
             <article class="tf2-card">
